@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="logo">
+        <img src="logo.png" alt="logo">
+    </div>  
+    <div class="main">    
+        <input type="checkbox" id="chk" aria-hidden="true">
+            <div class="signup">
+                <form action="homepage.html">
+                    <label for="chk" aria-hidden="true" id="heading">Sign up</label>
+                    <input type="text" name="txt" placeholder="User name" required="">
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <button id="submit">Sign up</button>
+                </form>
+            </div>
+
+            <div class="login">
+                <form action="homepage.html">
+                    <label for="chk" aria-hidden="true" id="heading">Login</label>
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <button id="submit">Login</button>
+                </form>
+            </div>
+
+            <div class="study-sphere">STUDY SPHERE</div>
+    </div>
+    <script>
+        function validateLoginForm() {
+            var email = document.forms["loginForm"]["email"].value;
+            var password = document.forms["loginForm"]["pswd"].value;
+    
+            // Email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+    
+            // Password validation
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert("Please enter a valid password. It must contain at least one uppercase letter, one lowercase letter, one number, one special character, and be at least 8 characters long.");
+                return false;
+            }
+        }
+    
+        function validateSignupForm() {
+            var userName = document.forms["signupForm"]["txt"].value;
+            var email = document.forms["signupForm"]["email"].value;
+            var password = document.forms["signupForm"]["pswd"].value;
+    
+            // Email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+    
+            // Password validation
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert("Please enter a valid password. It must contain at least one uppercase letter, one lowercase letter, one number, one special character, and be at least 8 characters long.");
+                return false;
+            }
+    
+            if (userName == "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+        }
+    </script>    
+</body>
+</html>

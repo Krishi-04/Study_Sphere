@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: black;
+}
+
+.main {
+    margin: 95px 0 50px 0;
+    padding: 20px;
+    justify-content: start;
+    text-align: center;
+    max-width: 720px;
+}
+
+header{
+    display: flex;
+    height: 110px;
+    background-color: #20242a;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+header p{
+    display:inline-flex;
+    justify-content: center ;
+    align-items: flex-end;
+    margin: 0;
+    padding: 10px 20px;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+header p:hover{
+    background-color: #76abae;
+    
+}
+
+.navbar{
+    position: fixed;
+    top: 70px;
+    right: 0;
+}
+.logo 
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    font-size: 3em;
+    color: #76abae;
+    margin: 20px;
+}
+
+.description {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 0 80px 0;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.contact-info a{
+    text-decoration: underline;
+    color: #fff;
+}
+
+.box {
+    width: 230px;
+    height: 230px;
+    background-color:#222831;
+    margin: 20px 10px;
+    color: black;
+    text-decoration: none;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.box p{
+    margin-bottom: 30px;
+}
+
+.box:hover {
+    height: 260px;
+    transform: translateY(-20px);
+}
+
+.image {
+    margin-top: 15px;
+    height: 200px;
+    width: 200px;
+}
+
+.contact-form {
+    background-color: #222831;
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.contact-form h2 {
+    margin-top: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Jost', sans-serif;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #eeeeee;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+    font-weight: bold;
+}
+
+#contact{
+    background-color:#567d7f;
+}
+
+@media only screen and (max-width: 768px) {
+    *{
+        margin: 0;
+    }
+}
